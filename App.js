@@ -7,7 +7,7 @@ export default function App() {
   const [data, setData] = useState([]);
   
   useEffect(() => {
-    fetch('https://raw.githubusercontent.com/algosigma/jsreactjs/master/homestays.json')
+    fetch('https://raw.githubusercontent.com/algosigma/js-reactjs/master/homestays.json')
     .then((response)=> response.json())
     .then((hasil)=> setData(hasil))
     .catch(error=> console.log)
@@ -22,7 +22,7 @@ export default function App() {
         <View style={styles.containerImage}>
           <ImageBackground style={styles.image}
           source={{uri:item.fotoUrl}}>
-            <Text style={styles.price}>Rp. {Item.harga}</Text>
+            <Text style={styles.price}>Rp. {item.harga}</Text>
           </ImageBackground>
         </View>
       </Card>
